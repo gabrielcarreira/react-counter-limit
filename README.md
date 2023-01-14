@@ -1,4 +1,10 @@
-# Getting Started with Create React App
+# Counter Limit
+![Amostra Counter](https://media.giphy.com/media/NTnYUmhKqoEZ3EGnSy/giphy.gif)
+
+Meu primeiro projeto React para estudos
+
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
