@@ -10,7 +10,8 @@ class TextCounter extends Component {
 
     this.state = {
       totalChars: 0,
-      text: ''
+      text: '',
+      limitColor: 'white'
     }
     this.handleChange = this.handleChange.bind(this)
   }
@@ -22,8 +23,16 @@ class TextCounter extends Component {
     if (text.length <= this.props.limit) {
       this.setState({
         totalChars: text.length,
-        text
+        text,
+        limitColor: 'white'
       })
+    } else {
+      this.setState({
+        totalChars: this.props.limit - text.length,
+        text,
+        limitColor: 'red'
+      })
+
     }
   }
 
@@ -34,7 +43,7 @@ class TextCounter extends Component {
       <div>
         <h1>React Counter</h1>
         <textarea onChange={this.handleChange} value={state.text} />
-        <div className="counter">
+        <div className="counter" style={{color: state.limitColor}}>
           <strong>Total:</strong> {state.totalChars} / {props.limit}
         </div>
       </div>
